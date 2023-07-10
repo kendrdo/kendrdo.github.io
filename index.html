@@ -1,18 +1,77 @@
 <!doctype html>
 <html>
 <head>
+<!--Responsive-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Google fonts-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Domine&family=Manrope&display=swap" rel="stylesheet">
+<!--CSS-->
 <style>
+
 body {
-  background-color:#F7F3E3;
-  color:#AF9164;
-  font-family:'Rubik', sans-serif;
+    background-color:#e8eef2;
+    color:#86A0B5;
+    font-family:'Manrope', sans-serif;
 }
+
+.credits {
+    font-size:14px;
+    letter-spacing:1.5px;
+}
+
+#headshot {
+    
+}
+
+#name {
+    font-size:70px;
+    font-family: 'Domine', serif;
+}
+
+#description {
+    font-size:20px;
+    letter-spacing:0.5px;
+    width:850px;
+}
+
+#resume-button, #portfolio-button, #contact-button {
+    background-color:#7C9AAE;
+    width:175px;
+    color:white;
+    letter-spacing:2px;
+    border:0px;
+    border-radius:15px;
+    font-family:'Manrope', sans-serif;
+    font-size:23px;
+    transition: background-color 1s ease-in-out; color 1s ease-in-out;
+}
+
+#resume-button:hover, #portfolio-button:hover, #contact-button:hover {
+    background-color:white;
+    color:#7C9AAE;
+}
+
+
 </style>
+<!--End CSS-->
 </head>
+
+<!--HTML-->
 <body>
-<p>test</p>
+<p class="credits">WEBSITE BY KENDRDO</p>
+<!--Picture-->
+<div id="headshot"><img src="https://galleryoftheunknown.files.wordpress.com/2023/07/womanheadshot1.png"></div>
+<p id= "name">Jane Doe, Web Developer</p>
+<div id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue mauris augue neque gravida in fermentum et sollicitudin.
+<br><br>
+Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Sem fringilla ut morbi tincidunt augue interdum velit euismod in. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in dictum.</div>
+<div class="b">
+<button id="resume-button">RESUME</button>
+<button id="portfolio-button">PORTFOLIO</button>
+<button id="contact-button">CONTACT</button>
+</div>
 </body>
+<!--HTML-->
 </html>
