@@ -19,10 +19,11 @@ body {
 .credits {
     font-size:14px;
     letter-spacing:1.5px;
+    text-align:center;
 }
 
-#headshot {
-    
+#headshot img {
+    border-radius:50%;
 }
 
 #name {
@@ -42,7 +43,7 @@ body {
     color:white;
     letter-spacing:2px;
     border:0px;
-    border-radius:15px;
+    border-radius:25px;
     font-family:'Manrope', sans-serif;
     font-size:23px;
     transition: background-color 1s ease-in-out; color 1s ease-in-out;
@@ -53,6 +54,37 @@ body {
     color:#7C9AAE;
 }
 
+#resume-section {
+     background-color:#7C9AAE;
+     color:white;
+     width:66%;
+     border-radius:40px;
+     padding:20px;
+     margin: auto;
+ }
+ 
+#resume-text {
+    font-family: 'Domine', serif;
+    font-size:50px;
+}
+
+.dropdowns > summary {
+    font-size:20px;
+}
+
+@media screen and (max-width: 800px) {
+  #resume-button, #portfolio-button, #contact-button, #description, #name {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    text-align:center;
+  }
+  #headshot img {
+      width:75%;
+      margin:auto;
+  }
+  }
+  
+  
+
 
 </style>
 <!--End CSS-->
@@ -60,18 +92,41 @@ body {
 
 <!--HTML-->
 <body>
+<!--Container-->
+<div id="container">
+
 <p class="credits">WEBSITE BY KENDRDO</p>
 <!--Picture-->
 <div id="headshot"><img src="https://galleryoftheunknown.files.wordpress.com/2023/07/womanheadshot1.png"></div>
+
 <p id= "name">Jane Doe, Web Developer</p>
+
 <div id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue mauris augue neque gravida in fermentum et sollicitudin.
 <br><br>
 Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Sem fringilla ut morbi tincidunt augue interdum velit euismod in. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in dictum.</div>
-<div class="b">
+
+<div class="buttons">
 <button id="resume-button">RESUME</button>
 <button id="portfolio-button">PORTFOLIO</button>
 <button id="contact-button">CONTACT</button>
 </div>
+
+</div>
+<!--End container-->
+<div id="resume-section">
+<p id="resume-text">Resume</p>
+<details class="dropdowns">
+<summary>Degrees:</summary>
+<p>Lorem ipsum dolor sit amet.</p>
+</details>
+
+<details class="dropdowns">
+<summary>Work Experience:</summary>
+<p>Augue mauris augue neque gravida in fermentum.</p>
+</details>
+
+</div>
+
 </body>
 <!--HTML-->
 </html>
