@@ -10,16 +10,25 @@
 <!--CSS-->
 <style>
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    background-color:#e8eef2;
+    background-color:#E8EEF2;
     color:#86A0B5;
     font-family:'Manrope', sans-serif;
 }
 
-.credits {
+header {
+    text-align:center;
+}
+
+
+.credits, #change-theme {
     font-size:14px;
     letter-spacing:1.5px;
-    text-align:center;
+    display:inline-block;
 }
 
 #headshot img {
@@ -43,7 +52,7 @@ body {
     color:white;
     letter-spacing:2px;
     border:0px;
-    border-radius:25px;
+    border-radius:35px;
     font-family:'Manrope', sans-serif;
     font-size:23px;
     transition: background-color 1s ease-in-out; color 1s ease-in-out;
@@ -55,31 +64,59 @@ body {
 }
 
 #resume-section {
-     background-color:#7C9AAE;
-     color:white;
      width:66%;
+     padding: 0 20px 20px 20px;
      border-radius:40px;
-     padding:20px;
      margin: auto;
  }
  
 #resume-text {
     font-family: 'Domine', serif;
-    font-size:50px;
+    font-size:70px;
+    letter-spacing:1px;
 }
 
 .dropdowns > summary {
-    font-size:20px;
+    font-size:23px;
+    letter-spacing:0.5px;
 }
 
+.dropdowns > p {
+    font-size:19px;
+    letter-spacing:0.5px;
+}
+
+/* Responsiveness */
 @media screen and (max-width: 800px) {
-  #resume-button, #portfolio-button, #contact-button, #description, #name {
-    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  #resume-button, #portfolio-button, #contact-button, #description, #name, .buttons {
+    width: 75%; /* The width is 100%, when the viewport is 800px or smaller */
     text-align:center;
+    margin:auto;
+  }
+  
+  #headshot {
+      width:66%;
+      margin:auto;
   }
   #headshot img {
-      width:75%;
+      width:100%;
       margin:auto;
+  }
+  
+  #resume-button, #portfolio-button, #contact-button {
+      margin-bottom:5px;
+  }
+  
+  .buttons, #description {
+      margin-top:10px;
+  }
+  
+  #name {
+      overflow-wrap:break-word;
+  }
+  
+  #resume-section {
+      text-align:center;
   }
   }
   
@@ -95,7 +132,10 @@ body {
 <!--Container-->
 <div id="container">
 
+<header>
 <p class="credits">WEBSITE BY KENDRDO</p>
+<p id="change-theme">CHANGE THEME</p>
+</header>
 <!--Picture-->
 <div id="headshot"><img src="https://galleryoftheunknown.files.wordpress.com/2023/07/womanheadshot1.png"></div>
 
@@ -105,24 +145,26 @@ body {
 <br><br>
 Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Sem fringilla ut morbi tincidunt augue interdum velit euismod in. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in dictum.</div>
 
+
 <div class="buttons">
-<button id="resume-button">RESUME</button>
+<a href="#resume-section"><button id="resume-button">RESUME</button></a>
 <button id="portfolio-button">PORTFOLIO</button>
 <button id="contact-button">CONTACT</button>
 </div>
 
 </div>
 <!--End container-->
+<br><br><br>
 <div id="resume-section">
 <p id="resume-text">Resume</p>
 <details class="dropdowns">
-<summary>Degrees:</summary>
-<p>Lorem ipsum dolor sit amet.</p>
+<summary>Education</summary>
+<p>BS Computer Science, Example University, 2000-2004</p>
 </details>
 
 <details class="dropdowns">
-<summary>Work Experience:</summary>
-<p>Augue mauris augue neque gravida in fermentum.</p>
+<summary>Work Experience</summary>
+<p>Web Developer at Example Inc, 2004-present</p>
 </details>
 
 </div>
