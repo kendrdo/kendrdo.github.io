@@ -37,9 +37,16 @@ header {
     text-decoration:underline;
 }
 
-.dark-mode {
-    background-color:#7C9AAE;
-    color:white;
+/* Dark mode */
+
+.dark-mode-body {
+    background-color:#57636D;
+    color:#DEE9F1;
+}
+
+.dark-mode-buttons {
+    background-color: white;
+    color:##57636D;
 }
 
 #container {
@@ -162,6 +169,24 @@ header {
 
 .fa-envelope:hover, .fa-linkedin:hover, .fa-square-github:hover {
     color:#3D586E;
+}
+
+.envelope .envelope-tooltip, .linkedin .linkedin-tooltip, .github .github-tooltip {
+    opacity: 0%;
+    padding:12px 17px;
+    background-color:white;
+    color:##7C9AAE;
+    font-size:20px;
+    border-radius:30px;
+    letter-spacing:1.5px;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    z-index:1;
+    margin-left:-35px;
+}
+
+.envelope:hover .envelope-tooltip, .linkedin:hover .linkedin-tooltip, .github:hover .github-tooltip {
+    opacity:100%;
 }
 
 /* --- */
@@ -291,9 +316,9 @@ Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Sem fringil
 <p id="contact-text">Contact</p>
 <br>
 <div id="contact-icons">
-<i class="fa-solid fa-envelope"></i>
-<i class="fa-brands fa-linkedin"></i>
-<i class="fa-brands fa-square-github"></i>
+<div class="envelope"><i class="fa-solid fa-envelope"></i><span class="envelope-tooltip">EMAIL</span></div>
+<div class="linkedin"><i class="fa-brands fa-linkedin"></i><span class="linkedin-tooltip">LINKEDIN</span></div>
+<div class="github"><i class="fa-brands fa-square-github"></i><span class="github-tooltip">GITHUB</span></div>
 </div>
 </div>
 
@@ -301,7 +326,7 @@ Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Sem fringil
 <script>
 function myFunction() {
    var element = document.body;
-   element.classList.toggle("dark-mode");
+   element.classList.toggle("dark-mode-body");
 }
 </script>
 
