@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Domine&family=Manrope&display=swap" rel="stylesheet">
+
 <!--CSS-->
 <style>
 
@@ -46,7 +47,7 @@ header {
 
 .dark-mode-buttons {
     background-color: white;
-    color:##57636D;
+    color:#57636D;
 }
 
 #container {
@@ -216,9 +217,13 @@ header {
 /* Responsiveness */
 @media screen and (max-width: 800px) {
   #resume-button, #portfolio-button, #contact-button, #description, #name, .buttons {
-    width: 75%; /* The width is 100%, when the viewport is 800px or smaller */
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
     text-align:center;
     margin:auto;
+  }
+  
+  header {
+      font-size:5vw;
   }
   
   #headshot {
@@ -230,6 +235,11 @@ header {
       margin:auto;
   }
   
+  #name {
+      font-size:13vw;
+  }
+  
+  
   #resume-button, #portfolio-button, #contact-button {
       margin-bottom:5px;
   }
@@ -238,16 +248,49 @@ header {
       margin-top:10px;
   }
   
+  .buttons, #description, #name {
+      clear:left;
+  }
+  
   #name {
       overflow-wrap:break-word;
   }
   
-  #resume-section {
+  #resume-section, #portfolio-section, #contact-text {
       text-align:center;
   }
   
   #container {
       padding:0 0 0 0;
+  }
+  
+  #portfolio-items {
+      flex-direction:column;
+      width:200px;
+      height:880px;
+  }
+  
+  #example-1, #example-2, #example-3, #example-4 {
+      width:200px;
+      height:200px;
+      line-height:200px;
+      margin-bottom:20px;
+      font-size:15px;
+  }
+  
+  #example-1:hover, #example-2:hover, #example-3:hover, #example-4:hover {
+    font-size:20px;
+    text-decoration:underline;
+    transition: font-size 1s, text-decoration 1s;
+  }
+  
+  #contact-icons {
+      flex-direction:column;
+      text-align:center;
+      width:200px;
+      height:200px;
+      margin-bottom:20px;
+      font-size:15px;
   }
  }
   
@@ -270,7 +313,7 @@ header {
 </header>
 <div id="container">
 <!--Picture-->
-<div id="headshot"><img src="https://galleryoftheunknown.files.wordpress.com/2023/07/womanheadshot1.png"></div>
+<div id="headshot"><img src="https://galleryoftheunknown.files.wordpress.com/2023/07/womanheadshot1-1.png"></div>
 
 <p id= "name">Jane Doe, Web Developer</p>
 
