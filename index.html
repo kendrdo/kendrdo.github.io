@@ -4,7 +4,7 @@
 
 <script src="https://kit.fontawesome.com/a61e512ba7.js" crossorigin="anonymous"></script>
 <!--Responsive-->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 <!--Google fonts-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,9 +59,9 @@ header {
 #container {
   width:75%;
   margin:auto;
-  padding:150px 0;
+  padding:150px 0 200px 0;
 }
-
+  
 #headshot img {
   border-radius:50%;
   float:left;
@@ -69,7 +69,7 @@ header {
 }
 
 #name {
-  font-size:70px;
+  font-size: 70px;
   font-family: 'Domine', serif;
 }
 
@@ -77,18 +77,25 @@ header {
   font-size:20px;
   letter-spacing:0.5px;
   width:900px;
+  margin-top:-50px;
 }
 
-#description, #name {
-  margin-left:450px;
+#description, #name, .buttons {
+  margin-left:460px;
+}
+
+#description {
+  margin-top:
 }
 
 .buttons {
-  margin-top:30px;
-  margin-left:450px;
-  width:800px;
+  margin-top:7px;
+  width:800px
 }
 
+.buttons a {
+  text-decoration: none;
+}
 
 #resume-button, #portfolio-button, #contact-button {
   background-color:#7C9AAE;
@@ -99,15 +106,18 @@ header {
   border-radius:35px;
   font-family:'Manrope', sans-serif;
   font-size:23px;
+  text-decoration: none;
+  padding:1px 0;
   margin-right:10px;
+  text-align:center;
+  display:inline-block;
   transition: background-color 1s ease-in-out, color 1s ease-in-out;
 }
-
+  
 #resume-button:hover, #portfolio-button:hover, #contact-button:hover {
   background-color: white !important;
   color: #7C9AAE !important;
   transition: background-color 1s ease-in-out, color 1s ease-in-out;
-  cursor: pointer;
 } 
   
 #resume-section, #portfolio-section, #contact-section {
@@ -116,6 +126,9 @@ header {
   margin:auto;
   padding:0 0 150px 0;
  }
+
+#resume-section {
+}
  
 #resume-text, #portfolio-text, #contact-text {
   font-family: 'Domine', serif;
@@ -163,12 +176,11 @@ header {
   border-radius:50%;
   text-align:center;
   transition: font-size 1s, text-decoration 1s;
-    
+  text-decoration: underline;
 }
 
 #example-1:hover, #example-2:hover, #example-3:hover, #example-4:hover {
   font-size:30px;
-  text-decoration:underline;
 }
 
 #contact-icons {
@@ -234,9 +246,9 @@ a {
 
 
 /* Responsiveness */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   #resume-button, #portfolio-button, #contact-button, #description, #name, .buttons {
-    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    width: 100%; /* The width is 100%, when the viewport is 1000px or smaller */
     text-align:center;
     margin:auto;
   }
@@ -249,15 +261,15 @@ a {
       width:66%;
       margin:auto;
   }
+  
   #headshot img {
       width:100%;
       margin:auto;
   }
   
   #name {
-      font-size:13vw;
+      font-size:12vw;
   }
-  
   
   #resume-button, #portfolio-button, #contact-button {
       margin-bottom:5px;
@@ -270,7 +282,6 @@ a {
   .buttons, #description, #name {
       clear:left;
   }
-  
   
   #name {
       overflow-wrap:break-word;
@@ -305,14 +316,14 @@ a {
     text-decoration:underline;
     transition: font-size 1s, text-decoration 1s;
   }
-
   
   #contact-icons {
-      flex-direction:column;
-      text-align:center;
-      width:100%;
-      height:200px;
-      font-size:15px;
+    flex-direction:column;
+    justify-content:space-between;
+    text-align:center;
+    width:100%;
+    height:200px;
+    font-size:15px;
   }
   
  }
@@ -349,27 +360,26 @@ a {
   
   <div class="buttons">
     <a href="#resume-section">
-      <button id="resume-button">
+      <p id="resume-button">
         RESUME
-      </button>
+      </p>
     </a>
     
     <a href="#portfolio-section">
-      <button id="portfolio-button">
+      <p id="portfolio-button">
         PORTFOLIO
-      </button>
+      </p>
     </a>
     
     <a href="#contact-section">
-      <button id="contact-button">
+      <p id="contact-button">
         CONTACT
-      </button>
+      </p>
     </a>
   </div>
   
   </div>
   <!--End container-->
-  <br><br><br>
   
   <div id="resume-section">
     <p id="resume-text">
